@@ -2,9 +2,9 @@
 
 ## Good Code Practices
 
-- [Software Carpentry](www.software-carpentry.org/)
+- [Software Carpentry](http://software-carpentry.org/)
 
 ## Version Control
 
-- [Stack Exchange](www.stackexchange.com)
+- [Stack Exchange](http://stackexchange.com)
 - [Try Git](http://try.github.io)

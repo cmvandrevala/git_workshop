@@ -3,6 +3,8 @@
 ## Git
 - [What is Version control?](http://vimeo.com/41027679), other GitHub vids in Vimeo. [here](http://vimeo.com/github/videos/).
 - [Version control with Git](http://software-carpentry.org/v5/novice/git/index.html) by Software Carpentry.
+- [GitHub](https://github.com/).
+- [BitBucket](https://bitbucket.org).
 
 
 ## Python Essentials
@@ -14,7 +16,7 @@
 
 ### MarkDown
 - [Markdown: Syntax](http://daringfireball.net/projects/markdown/syntax).
-- 
+
 
 ### reStructuredText
 - [reStructuredText](http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html).

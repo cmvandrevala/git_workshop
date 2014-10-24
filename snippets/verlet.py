@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/python
 """
 Use Verlet integration for solving
     F = m*a
@@ -7,14 +7,13 @@ Created on Fri Oct 24 18:26:57 2014
 
 @author: nicoguaro
 """
-
-#!/usr/bin/python
-## Verlet Integration Algorithm
-from numpy import *
-from scipy import linalg as LA
-import math
+import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.cm as cm
+from matplotlib import rcParams
+
+# Set default matplotlib parameters
+rcParams['font.family'] = 'serif'
+rcParams['font.size'] = 16
 
 def LJ_force(e,r_min,r):
     """
@@ -79,7 +78,7 @@ def simple_pendulum(g,theta):
         g is the gravity constant divided by the particle mass (double float)
         theta is the angle respect the vertical line (double float)
     """
-    F =  -g*sin(theta)
+    F =  -g*np.sin(theta)
     return F
 
 
@@ -100,9 +99,9 @@ print "Number of time steps: ", nsteps
 print "Initial position: ", x0
 print "Initial speed: ", v0
 
-time = zeros( (nsteps+1) )
-x = zeros( (nsteps+1) )
-v = zeros( (nsteps+1) )
+time = np.zeros( (nsteps+1) )
+x = np.zeros( (nsteps+1) )
+v = np.zeros( (nsteps+1) )
 time[0] = 0.
 x[0] = x0
 v[0] = v0
@@ -113,10 +112,12 @@ for i in range(1,nsteps):
     time[i+1] = time[i] + Dt
     x[i+1] = 2*x[i]-x[i-1]+a*Dt**2
     v[i] = (x[i+1] - x[i-1])/2./Dt
+    
 v[nsteps] = (x[nsteps] - x[nsteps-1])/Dt
 
-plt.plot(time,x)
+plt.plot(time, x, lw=2)
 plt.xlabel("Time")
 plt.ylabel("Position")
+plt.grid(True, color="b", alpha=0.4)
 plt.show()
     

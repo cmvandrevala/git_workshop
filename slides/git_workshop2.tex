@@ -22,87 +22,139 @@
 \end{frame}
 
 % OVERVIEW
-\frame{
+\begin{frame}
     \frametitle{\large{Overview}}
     \tableofcontents
-}
+\end{frame}
 
 
-\frame{
+\begin{frame}
     \frametitle{Disclaimer}
-}
+\end{frame}
 
+
+% ======================================= %
+% GITHUB PAGES
+% ======================================= %
 \section[GitHub Pages]{GitHub Pages and Jekyll}
 
-\frame{
+\begin{frame}
     \frametitle{Pages}
-}
+    
+    \begin{enumerate}
+    \item GitHub allow users to have one personal (static) site. \pause
+    
+    \item Allows a site per project. \pause
+    
+    \item Jekyll is the site-generator behind GitHub Pages. There are plenty of templates written in Liquid. \footnote{See here \url{http://jekyllrb.com/docs/templates/}. If you are one of those geeks... you can also use CSS templates.}
+
+    \end{enumerate}
+\end{frame}
       
 
-
+% ======================================= %
+% GITHUB MOBILE APP
+% ======================================= %
 \section[Mobile App]{GitHub Mobile App}
 
-\frame{
-    \frametitle{Mobile App}    
-}
+\begin{frame}
+    \frametitle{Mobile App}
+\begin{columns}[c]
+\column{2in}
+	\centering
+	\includegraphics[width=1in]{img/mobile.jpg} 
+\column{2in}
+GitHub for Android\footnote{https://mobile.github.com/}
+\begin{enumerate}
+\item Issue Dashboard.
+\item Gist Support.
+\item News Feed.
+\end{enumerate}
+\end{columns}
+\vspace{5mm}
+{\small Off course, it is not a replacement for a Desktop client. But it is good enough to keep track of some changes on the go.}
+\end{frame}
 
 
+% ======================================= %
+% GITHUB EDUCATION
+% ======================================= %
 \section[GitHub Education]{GitHub Student Developer Pack (GitHub Education)}
 
-\frame{
-    \frametitle{The Git Cycle}
-    Synchronize Version (git pull)
-    Make Changes to Code
-    Stage Changes for Commit (git add)
-    Commit Changes (git commit)
-    Push to Origin (git push)
-}
-
-\frame{
-    \frametitle{ Review Changes}
-    View Log (git log)
-    View Staged Changes (git status)
-} 
-
+\begin{frame}
+    \frametitle{GitHub Student Developer Pack}
+      
+    A couple of months ago GitHub (with some companies) released a pack of free tools for students\footnote{https://education.github.com/pack}. Here we present some of them that were arbitrarily chosen.
     
-\frame{
-    \frametitle{Recovering Past Versions}
-    Organizing Past Versions (MD5 Hash)
-    Recovering a Previous Version (git checkout )
-}
+    \begin{enumerate}    
+    \item Atom: a text editor developed by GitHub. \pause
+    
+    \item CrowdFlower: data enrichment, data mining and crowdsourcing services. \pause
+    
+    \item GitHub: 5 Private GitHub Repos. \pause
+    
+    \item SendGrid: Email services. \pause
+    
+    \item Unreal Engine: A suite of game development tools for PC, console, mobile and web.
+    \end{enumerate}
+
+\end{frame}
     
 
+% ======================================= %
+% GITHUB OPENSOURCE PROJECTS
+% ======================================= %
 \section[Open Source]{GitHub Open Source Projects}
-\frame{
+\begin{frame}
     \frametitle{GitHub Open Source Projects}
-}
+\end{frame}
 
 
-
+% ======================================= %
+% GITHUB COMMUNITY
+% ======================================= %
 \section[GitHub Community]{GitHub Community}
-\frame{
+\begin{frame}
     \frametitle{GitHub Community}
-}
+\end{frame}
 
-
+% ======================================= %
+% PROGRAMMING EXAMPLE
+% ======================================= %
 \section[Example]{Programming Example}
-\frame{
+\begin{frame}[allowframebreaks]
     \frametitle{Verlet Integration}
     
-}
+Verlet integration is a numerical method used to integrate Newton's equations of motion. It is frequently used to calculate trajectories of particles in molecular dynamics simulations and computer graphics.
 
-
-\section[Challenges]{Programming Challenges}
-\frame{
-    \frametitle{Small programming}
+If we do a Taylor expansion of the position vector $\vec{x}(t\pm\Delta t)$ forwards and backward we get
+\begin{align*}
+\vec{x}(t + \Delta t)
+&= \vec{x}(t) + \vec{v}(t)\Delta t + \frac{\vec{a}(t) \Delta t^2}{2}
++ \frac{\vec{b}(t) \Delta t^3}{6} + \mathcal{O}(\Delta t^4)\\
+\vec{x}(t - \Delta t)
+&= \vec{x}(t) - \vec{v}(t)\Delta t + \frac{\vec{a}(t) \Delta t^2}{2}
+- \frac{\vec{b}(t) \Delta t^3}{6} + \mathcal{O}(\Delta t^4), \,
+\end{align*}
+Adding these two expansions gives
+\[\vec{x}(t + \Delta t) = 2\vec{x}(t) - \vec{x}(t - \Delta t) + \vec{a}(t) \Delta t^2 + \mathcal{O}(\Delta t^4).\,\]
+We can see that the first and third-order terms from the Taylor expansion cancel out, thus making the Verlet integrator an order more accurate than integration by simple Taylor expansion alone.
     
-}
+\end{frame}
+
+% ======================================= %
+% PROGRAMMING CHALLENGES
+% ======================================= %
+\section[Challenges]{Programming Challenges}
+\begin{frame}
+    \frametitle{Small programming}    
+\end{frame}
 
 
 %% Ending
-\frame{
+\begin{frame}
     \frametitle{\large{}}
     \huge{\center{\color{RUBblau}{Thank you for your attention.}}}
-}
+\end{frame}
 
 \end{document}

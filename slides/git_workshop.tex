@@ -1,67 +1,136 @@
 \pdfminorversion=5 % To enforce 1.5 version of PDF
 \input{src/header}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % TITLE PAGE PARAMETERS
-\title{Workshop: Git and GitHub}
+\title{Version Control Workshop: Git and GitHub}
 \subtitle{~}
 \institute{Purdue University}
 \author[AUTHOR]{\scriptsize{Cyrus Vandrevala $^1$\\Nicol\'as Guar\'in-Zapata$^2$}\\
 \tiny{$^1$ Physics Department\\ $^2$ Civil Engineering Department}}
-\date{\today}
+\date{October 30-31, 2014}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% ===================================================================== %
-% CHAPTER 0 : Title page and overview
-% ===================================================================== %
 \begin{document}
 
 % TITLEPAGE
 \begin{frame}[plain]
- \titlepage
+  \titlepage
 \end{frame}
 
 % OVERVIEW
-\frame{
+\begin{frame}
 \frametitle{\large{Overview}}
 \begin{enumerate}
-\item Motivation
-\item Workflow
-\item Methodology
-\item Results
-\item Applications
+\item Introduction to Version Control
+\item Workflow in Computational Science
+\item Learning Git
+\begin{itemize}
+\item Setting Up Git On Your Machine
+\item Basic Git Cycle
+\item Git Branches
+\item Git Delete Commands
+\end{itemize}
+\item Git and GitHub
+\item Collaborated Summary
 \end{enumerate}
-}
+\end{frame}
 
-% MOTIVATION
-\frame{
-\frametitle{\large{Motivation}}
- \begin{columns}
-        \column{1\textwidth}
-	  	\begin{enumerate}
-	\item Reason 1.
-	\item Reason 2.
-	\item Reason 3.
-	\item Reason 4.
-	\end{enumerate}
-	
+% ======================================= %
+% INTRODUCTION TO VERSION CONTROL
+% ======================================= %
 
-	
- \end{columns}
-}
+% WHAT IS VERSION CONTROL?
+\begin{frame}
+\frametitle{\large{What is Version Control?}}
+Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.
+\end{frame}
 
-
-% ======= Results ======= %
-
-
-
-\frame{
-\frametitle{Conclusions}
+% WHY IS VERSION CONTROL IMPORTANT?
+\begin{frame}
+\frametitle{\large{Why is Version Control Important?}}
 \begin{enumerate}
-	\item ...
+\item Keep Track of Code History
+\pause
+\item Concurrent Teamwork
+\pause
+\item Coordinating Development, Testing, Deployment, etc.
+\pause
+\item Due Diligence Checks
+\pause
+\item Structuring the Way You Develop Code
+\pause
+\item Sharing Code
 \end{enumerate}
-}
+\pause
+Everybody should use version control!
+\end{frame}
 
+% WHAT OPTIONS ARE AVAILABLE? (part 1)
+\begin{frame}
+\frametitle{\large{What Options Are Available?}}
+\textbf{Option \#1: Client-Server Version Control Systems}
+\linebreak
+\begin{columns}[c]
+\column{2in}
+\textbf{Advantages}
+\begin{enumerate}
+\item A Single Admin Keeps Track of the Project
+\item There is a Single Master Version of the Code
+\item A Central Server Can Be Created for the Project
+\end{enumerate}
+\column{2in}
+\textbf{Disadvantages}
+\begin{enumerate}
+\item There Is Only One Admin
+\item You Need a Network Connection to Work
+\item Operations Can Be Slow (You Need to Access a Central Server)
+\end{enumerate}
+\end{columns}
+\vspace{5mm}
+Examples include CVS
+\end{frame}
+
+% WHAT OPTIONS ARE AVAILABLE? (part 2)
+\begin{frame}
+\frametitle{\large{What Options Are Available?}}
+\textbf{Option \#1: Distributed Version Control Systems}
+\linebreak
+\begin{columns}[c]
+\column{2in}
+\textbf{Advantages}
+\begin{enumerate}
+\item It is Easy to Work Without a Network Connection
+\item Multiple Branches Can Provide Multiple Environments
+\item You Do Not Need an Internet Connection (Until Committing)
+\end{enumerate}
+\column{2in}
+\textbf{Disadvantages}
+\begin{enumerate}
+\item It is a More Sophisticated System
+\item People Need to Talk More
+\item It Is *Really* Easy To Create Unorganized Code 
+\end{enumerate}
+\end{columns}
+\vspace{5mm}
+Examples include Git and Bazaar
+\end{frame}
+
+% WHY GIT AND GITHUB?
+\begin{frame}
+\frametitle{\large{Why Git and GitHub?}}
+\begin{enumerate}
+\item It Has a Great Social Community
+\item It Keeps Track of Detailed Metadata (More Than SVN)
+\item Branching is Encouraged and Modularizes Development
+\end{enumerate}
+\end{frame}
+
+% ======================================= %
+% WORKFLOW IN COMPUTER SCIENCE
+% ======================================= %
 
 
 % ===================================================================== %

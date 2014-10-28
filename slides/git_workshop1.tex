@@ -1,108 +1,216 @@
 \pdfminorversion=5 % To enforce 1.5 version of PDF
+
 \input{src/header}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % TITLE PAGE PARAMETERS
-\title{Workshop: Git and GitHub}
+\title{Version Control Workshop: Git and GitHub}
 \subtitle{Day 1}
 \institute{Purdue University}
 \author[AUTHOR]{\scriptsize{Cyrus Vandrevala $^1$\\Nicol\'as Guar\'in-Zapata$^2$}\\
 \tiny{$^1$ Physics Department\\ $^2$ Civil Engineering Department}}
-\date{\today}
+\date{October 30-31, 2014}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% ===================================================================== %
-% CHAPTER 0 : Title page and overview
-% ===================================================================== %
 \begin{document}
 
 % TITLEPAGE
 \begin{frame}[plain]
- \titlepage
+  \titlepage
 \end{frame}
 
 % OVERVIEW
-\frame{
-    \frametitle{\large{Overview}}
-    \tableofcontents
-}
+%\begin{frame}
+%\frametitle{\large{Overview}}
+%\begin{enumerate}
+%\item Introduction to Version Control
+%\item Workflow in Computational Science
+%\item Learning Git
+%\begin{itemize}
+%\item Setting Up Git On Your Machine
+%\item Basic Git Cycle
+%\item Git Branches
+%\item Git Delete Commands
+%\end{itemize}
+%\item Git and GitHub
+%\item Collaborated Summary
+%\end{enumerate}
+%\end{frame}
 
+\begin{frame}
+\frametitle{\large{Overview}}
+\tableofcontents
+\end{frame}
 
-\frame{
-    \frametitle{Disclaimer}
-}
+% ======================================= %
+% INTRODUCTION TO VERSION CONTROL
+% ======================================= %
 
 \section[Intro]{Introduction to Version Control}
 
-\frame{
-    \frametitle{Motivation}
-}
+% WHAT IS VERSION CONTROL?
+\begin{frame}
+\frametitle{\large{What is Version Control?}}
+Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.
+\end{frame}
 
+% WHY IS VERSION CONTROL IMPORTANT?
+\begin{frame}
+\frametitle{\large{Why is Version Control Important?}}
+\begin{enumerate}
+\item Keep Track of Code History
+\pause
+\item Concurrent Teamwork
+\pause
+\item Coordinate Coding Environments
+\pause
+\item Due Diligence Checks
+\pause
+\item Share Code
+\end{enumerate}
+\pause
+\vspace{5mm}
+Everybody Should Use Version Control!
+\end{frame}
 
+% WHAT OPTIONS ARE AVAILABLE? (part 1)
+\begin{frame}
+\frametitle{\large{What Options Are Available?}}
+\textbf{Option \#1: Client-Server Version Control Systems}
+\vspace{8mm}
+\begin{columns}[c]
+\column{2in}
+{\small \textbf{Advantages}}
+\begin{enumerate}
+\small 
+\item A Single Admin Keeps Track of the Project
+\item There is a Single Master Version of the Code
+\item It is Relatively Easy to Learn
+\end{enumerate}
+\column{2in}
+{\small \textbf{Disadvantages} }
+\begin{enumerate}
+\small
+\item There Is Only One Admin/Server
+\item You Need a Network Connection to Work
+\item Operations Can Be Slow
+\end{enumerate}
+\end{columns}
+\vspace{5mm}
+{\small Examples include Concurrent Versions System (CVS) and Subversion (SVN).}
+\end{frame}
 
-\frame{
-    \frametitle{What is Version Control?}
-}
+% WHAT OPTIONS ARE AVAILABLE? (part 2)
+\begin{frame}
+\frametitle{\large{What Options Are Available?}}
+\textbf{Option \#2: Distributed Version Control Systems}
+\vspace{8mm}
+\begin{columns}[c]
+\column{2in}
+{\small \textbf{Advantages}}
+\begin{enumerate}
+\small
+\item You Don't Need a Network Connection
+\item Multiple Coding Environments
+\item It Encourages Collaboration and Modularity
+\end{enumerate}
+\column{2in}
+{\small \textbf{Disadvantages}}
+\begin{enumerate}
+\small
+\item Can Be Difficult to Learn
+\item Teams Need to Talk About Conventions
+\item It is Really Easy To Create Unorganized Code 
+\end{enumerate}
+\end{columns}
+\vspace{5mm}
+{\small Examples include Git/GitHub and Bazaar.}
+\end{frame}
 
-\frame{
-    \frametitle{Why is Version Control Important?}
-}
+% WHY GIT AND GITHUB? (part 1)
+\begin{frame}
+\frametitle{\large{Why Git and GitHub?}}
+\begin{enumerate}
+\item It Keeps Track of Detailed Metadata (More Than Others)
+\item Branching is Encouraged (Which Modularizes Development)
+\item GitHub Has a Great Social Community
+\end{enumerate}
+\end{frame}
 
-\frame{
-    \frametitle{Version Control Options Available}
-    Client-Server vs. Distributed
-}
+% WHY GIT AND GITHUB? (part 2)
+\begin{frame}
+\frametitle{\large{Why Git and GitHub?}}
+Full Disclosure...
+\begin{enumerate}
+\item It Isn't the Best for Binary Files
+\item GitHub Distinguishes Between Public and Private Repos
+\end{enumerate}
+\end{frame}
 
-\frame{
-    \frametitle{Advantages and Disadvantages of GitHub}
-    Excellent for Collaboration in the Open Source Community
-    Not Great for Binary Files (Subversion is Better)
-}
-    
-        
-    
-        
-
-
+% ======================================= %
+% WORKFLOW IN COMPUTER SCIENCE
+% ======================================= %
 \section[SciComp Work Flow]{Work Flow in Computational Science}
 
-\frame{
-    \frametitle{Good Code Practices}    
-}
+\begin{frame}
+\frametitle{\large{Version Control in Academia}}
+\begin{enumerate}
+\item It Creates Reproducible Research
+\item It Helps Train New Group Members
+\item It Encourages Collaboration
+\item It Encourages Good Code Practices
+\end{enumerate}
+\end{frame}
 
-\frame{
-    \frametitle{The Importance of Reproducible Research}
-    
-}
+\begin{frame}
+\frametitle{\large{Version Control in Academia}}
+Some Useful Skills That You Should Learn Are:
+\begin{enumerate}
+\item Bash
+\item Markdown
+\end{enumerate}
+\end{frame}
 
-\frame{
-    \frametitle{Collaboration in Academia}
-    
-}
-
-\frame{
-    \frametitle{Useful Skills to Aid Work Flow}
-    Markdown
-    Bash
-}
-
+% ======================================= %
+% SETTING UP GIT
+% ======================================= %
 
 \section[Setting Up Git]{Setting Up Git On Your Machine}
 
-\frame{
-    \frametitle{Set Up Git (GUI and Terminal)}
-}
+\begin{frame}
+\frametitle{\large{Setting Up Git - Linux}}
+You can use the package management tool that comes with your distribution (use sudo):
+\begin{enumerate}
+\item yum install git
+\item apt-get install git
+\end{enumerate}
+\end{frame}
 
-\frame{
-    \frametitle{Create a New Git Directory (git init)}
-}
+\begin{frame}
+\frametitle{\large{Setting Up Git - Mac}}
+There are three main ways to install Git:
+\begin{enumerate}
+\item Install the Xcode Command Line Tools and Type "git" Into the Terminal
+\item Binary Installer: \href{http://git-scm.com/download/mac}{http://git-scm.com/download/mac}
+\item Git/GitHub GUI: \href{https://mac.github.com/}{https://mac.github.com/}
+\end{enumerate}
+\end{frame}
 
+\begin{frame}
+\frametitle{\large{Setting Up Git - Windows}}
+There are three main ways to install Git:
+\begin{enumerate}
+\item Binary Installer: \href{http://git-scm.com/download/win}{http://git-scm.com/download/win}
+\item msysGit: \href{http://msysgit.github.io/}{http://msysgit.github.io/}
+\item Git/GitHub GUI: \href{https://windows.github.com/}{https://windows.github.com/}
+\end{enumerate}
+\end{frame}
 
-\frame{
-    \frametitle{Local vs. Remote References}
-    Clone a Repository (git clone)
-}
-   
+% ======================================= %
+% BASIC GIT
+% ======================================= %
 
 \section[Basic Git]{Basic Git Work Flow}
 
@@ -128,8 +236,12 @@
     Recovering a Previous Version (git checkout )
 }
     
-
+    
 \section[Branches]{Git Branches}
+% ======================================= %
+% BRANCHES
+% ======================================= %
+
 \frame{
     \frametitle{What is Branching?}
 }
@@ -152,6 +264,9 @@
 
 
 \section[Delete]{Git Delete Commands}
+% ======================================= %
+% GIT DELETE
+% ======================================= %
 \frame{
     \frametitle{Delete a File (rm vs. git rm)}
 }
@@ -186,9 +301,12 @@
 }
 
 
+% ===================================================================== %
+% COLLABORATED SUMMARY
+% ===================================================================== %
 \frame{
-    \frametitle{\large{}}
-    \huge{\center{\color{RUBblau}{Thank you for your attention.}}}
+\frametitle{\large{}}
+	\huge{\center{\color{RUBblau}{Thank you for your attention.}}}
 }
 
 \end{document}

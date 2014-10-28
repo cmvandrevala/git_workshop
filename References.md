@@ -4,6 +4,7 @@
 - [What is Version control?](http://vimeo.com/41027679), other GitHub vids in Vimeo. [here](http://vimeo.com/github/videos/).
 - [Version control with Git](http://software-carpentry.org/v5/novice/git/index.html) by Software Carpentry.
 - [GitHub](https://github.com/).
+- [GitHub: Making Your Code Citable](https://guides.github.com/activities/citable-code/). This allows to generate a DOI for your sourcecode.
 - [BitBucket](https://bitbucket.org).
 
 

@@ -6,7 +6,7 @@
 
 % TITLE PAGE PARAMETERS
 \title{Version Control Workshop: Git and GitHub}
-\subtitle{~}
+\subtitle{Day 1}
 \institute{Purdue University}
 \author[AUTHOR]{\scriptsize{Cyrus Vandrevala $^1$\\Nicol\'as Guar\'in-Zapata$^2$}\\
 \tiny{$^1$ Physics Department\\ $^2$ Civil Engineering Department}}
@@ -22,26 +22,38 @@
 \end{frame}
 
 % OVERVIEW
+%\begin{frame}
+%\frametitle{\large{Overview}}
+%\begin{enumerate}
+%\item Introduction to Version Control
+%\item Workflow in Computational Science
+%\item Learning Git
+%\begin{itemize}
+%\item Setting Up Git On Your Machine
+%\item Basic Git Cycle
+%\item Git Branches
+%\item Git Delete Commands
+%\end{itemize}
+%\item Git and GitHub
+%\item Collaborated Summary
+%\end{enumerate}
+%\end{frame}
+
 \begin{frame}
 \frametitle{\large{Overview}}
-\begin{enumerate}
-\item Introduction to Version Control
-\item Workflow in Computational Science
-\item Learning Git
-\begin{itemize}
-\item Setting Up Git On Your Machine
-\item Basic Git Cycle
-\item Git Branches
-\item Git Delete Commands
-\end{itemize}
-\item Git and GitHub
-\item Collaborated Summary
-\end{enumerate}
+\tableofcontents
+\end{frame}
+
+\begin{frame}
+\frametitle{\large{Disclaimer}}
+
 \end{frame}
 
 % ======================================= %
 % INTRODUCTION TO VERSION CONTROL
 % ======================================= %
+
+\section[Intro]{Introduction to Version Control}
 
 % WHAT IS VERSION CONTROL?
 \begin{frame}
@@ -145,6 +157,7 @@ Full Disclosure...
 % ======================================= %
 % WORKFLOW IN COMPUTER SCIENCE
 % ======================================= %
+\section[SciComp Work Flow]{Work Flow in Computational Science}
 
 \begin{frame}
 \frametitle{\large{Version Control in Academia}}
@@ -168,6 +181,8 @@ Some Useful Skills That You Should Learn Are:
 % ======================================= %
 % SETTING UP GIT
 % ======================================= %
+
+\section[Setting Up Git]{Setting Up Git On Your Machine}
 
 \begin{frame}
 \frametitle{\large{Setting Up Git - Linux}}
@@ -197,6 +212,98 @@ There are three main ways to install Git:
 \item Git/GitHub GUI: \href{https://windows.github.com/}{https://windows.github.com/}
 \end{enumerate}
 \end{frame}
+
+% ======================================= %
+% BASIC GIT
+% ======================================= %
+
+\section[Basic Git]{Basic Git Work Flow}
+
+\frame{
+    \frametitle{The Git Cycle}
+    Synchronize Version (git pull)
+    Make Changes to Code
+    Stage Changes for Commit (git add)
+    Commit Changes (git commit)
+    Push to Origin (git push)
+}
+
+\frame{
+    \frametitle{ Review Changes}
+    View Log (git log)
+    View Staged Changes (git status)
+} 
+
+    
+\frame{
+    \frametitle{Recovering Past Versions}
+    Organizing Past Versions (MD5 Hash)
+    Recovering a Previous Version (git checkout )
+}
+    
+    
+\section[Branches]{Git Branches}
+% ======================================= %
+% BRANCHES
+% ======================================= %
+
+\frame{
+    \frametitle{What is Branching?}
+}
+
+\frame{
+    \frametitle{Create a New Branch (git checkout -b )}
+}
+
+\frame{
+    \frametitle{Merge Two Branches (git merge )}
+}
+
+\frame{
+    \frametitle{Synchronize Two Branches (git rebase )}
+}
+
+\frame{
+    \frametitle{List All Branches (git branch)}
+}
+
+
+\section[Delete]{Git Delete Commands}
+% ======================================= %
+% GIT DELETE
+% ======================================= %
+\frame{
+    \frametitle{Delete a File (rm vs. git rm)}
+}
+
+\frame{
+    \frametitle{Delete a File (rm vs. git rm)}
+}
+
+\frame{
+    \frametitle{Undoing Changes (git revert vs. git reset)}
+}
+
+
+\section[GitHub]{Combining Git With GitHub}
+\frame{
+    \frametitle{Public vs. Private Repositories}
+    Bitbucket and GitHub
+}
+
+\frame{
+    \frametitle{Set Up Git Remote}
+}
+
+
+\frame{
+    \frametitle{Review the Git Cycle}
+}
+
+\frame{
+    \frametitle{Pull Requests}
+    Forking a Repository
+}
 
 
 % ===================================================================== %

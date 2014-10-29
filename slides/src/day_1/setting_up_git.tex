@@ -12,6 +12,7 @@ You can use the package management tool that comes with your distribution (use s
 \item apt-get install git
 \end{enumerate}
 \end{frame}
+\note{}
 
 \begin{frame}
 \frametitle{\large{Setting Up Git - Mac}}
@@ -22,6 +23,9 @@ There are three main ways to install Git:
 \item Git/GitHub GUI: \href{https://mac.github.com/}{https://mac.github.com/}
 \end{enumerate}
 \end{frame}
+\note[itemize]{
+\item The GUI only implements a subset of the full Git functionality, so it is best to learn how to use the command line.
+}
 
 \begin{frame}
 \frametitle{\large{Setting Up Git - Windows}}
@@ -32,9 +36,44 @@ There are three main ways to install Git:
 \item Git/GitHub GUI: \href{https://windows.github.com/}{https://windows.github.com/}
 \end{enumerate}
 \end{frame}
+\note[itemize]{
+\item The GUI only implements a subset of the full Git functionality, so it is best to learn how to use the command line.
+}
 
 \begin{frame}
-\frametitle{\large{Setting Up a Git Repo}}
+\frametitle{\large{Setting Up Git - Installing From Source}}
+You can also install GitHub from source. See the Git website for full instructions on how to do that.
+\end{frame}
+\note[itemize]{
+\item http://git-scm.com/
+}
+
+\begin{frame}
+\frametitle{\large{Setting Up Git - Config File}}
+Git stores user information in \emph{/etc/gitconfig}, \emph{~/.gitconfig}, and \emph{/your-project/.git/config}. To set up your information: \\
+\begin{itemize}
+\item \emph{git config -{}-global user.name ``Cyrus Vandrevala''}
+\item \emph{git config -{}-global user.email cyrus.vandrevala@gmail.com}
+\item \emph{git config -{}-global core.editor vim}
+\end{itemize}
+\end{frame}
+\note[itemize]{
+\item http://git-scm.com/
+}
+
+\begin{frame}
+\frametitle{\large{Setting Up Git - Config File}}
+You can double check the information you entered by using: \\
+\begin{itemize}
+\item \emph{git config -{}-list}
+\end{itemize}
+\end{frame}
+\note[itemize]{
+\item http://git-scm.com/
+}
+
+\begin{frame}
+\frametitle{\large{Setting Up a New Git Repo}}
 \begin{enumerate}
 \item Create a New Directory (mkdir my-awesome-directory)
 \item Navigate Into the Directory (cd my-awesome-directory)
@@ -43,3 +82,18 @@ There are three main ways to install Git:
 \vspace{5mm}
 The git init command creates a hidden directory called .git that contains all of the metadata for the project. \emph{You should never change anything in .git directly!}
 \end{frame}
+\note{}
+
+\begin{frame}
+\frametitle{\large{Retrieving an Existing Git Repo}}
+\begin{enumerate}
+\item Navigate to the Directory Where You Want to Store the Project
+\item \emph{git clone https://mydirectory.com/}
+\end{enumerate}
+\vspace{5mm}
+\begin{itemize}
+\item Git supports many transfer protocols (including SSH)
+\item Remember, you are creating a standalone copy of the entire project.
+\end{itemize}
+\end{frame}
+\note{}

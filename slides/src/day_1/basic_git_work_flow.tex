@@ -30,3 +30,39 @@ Files in your project can be in one of three states:
 \end{enumerate}
 \end{frame}
 \note{}
+
+\begin{frame}
+\frametitle{\large The Basic Git Work Flow}
+In order to determine which files are in which state, you can use (most to least detail): \\
+\emph{git diff} (unstaged changes only)\\
+\emph{git status} \\
+\emph{git status -s}
+\end{frame}
+\note{}
+
+\begin{frame}
+\frametitle{\large The Basic Git Work Flow}
+In order to get a full history of your commits, you can use: \\
+\emph{git log}
+Everything is labeled with a SHA-1 checksum.
+\end{frame}
+\note{}
+
+\begin{frame}
+\frametitle{\large The Basic Git Work Flow}
+In order to ignore certain files in your commits, you can change: \\
+\emph{.gitignore}
+There are lots of .gitignore templates online at https:// github.com/ github/ gitignore
+Standard glob patterns work.
+\end{frame}
+\note{}
+
+\begin{frame}
+\frametitle{\large The Basic Git Work Flow}
+Shortcuts: \\
+\emph{git commit -m ``My message''}
+Commit with a message.
+\emph{git commit -a -m ``My message''}
+Commit without staging with a message.
+\end{frame}
+\note{}

@@ -6,4 +6,45 @@
 
 \begin{frame}
 \frametitle{\large Delete a File (rm vs. git rm)}
+If you rm a file, it will delete it locally, but it will still exist in your git directory. In order to fully delete a file, you need to use git rm
 \end{frame}
+\note{}
+
+\begin{frame}
+\frametitle{\large Delete a File (rm vs. git rm)}
+If you want to delete a file that has been staged, but not committed, use git rm -{}-cached
+\end{frame}
+\note{}
+
+\begin{frame}
+\frametitle{\large Delete a File (rm vs. git rm)}
+If you want to move a file, use git mv
+\end{frame}
+\note{}
+
+\begin{frame}
+\frametitle{\large Discard Changes to Unstaged Files}
+git checkout -{}- filename
+Branching is better practice
+\end{frame}
+\note{}
+
+\begin{frame}
+\frametitle{\large Amending Staged Files}
+In order to remove a file from the staged environment, use:
+git reset filename
+\end{frame}
+\note{}
+
+\begin{frame}
+\frametitle{\large Amending Commits}
+I purposely didn't add anything here. Don't do it...
+\end{frame}
+\note{}
+
+\begin{frame}
+\frametitle{\large Amending Commits}
+Ok, fine...
+git commit -{}-amend
+\end{frame}
+\note{}

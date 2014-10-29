@@ -122,23 +122,21 @@ pdfkeywords={Version control, Scientific Computing}
 % =============================================================
 \setbeamertemplate{title page}{
   \vspace{0.25cm}
-  \begin{columns}
-    \column{.6\textwidth}
-      \insertsubtitle\\
-	  \vspace{0.5cm}
-	  {\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle}\\
-	  \vspace{0.5cm}
-	  \insertauthor\\
-	  \vspace{2mm}
-	  \insertdate
-	  \vfill
-    \column{.4\textwidth}
-	\begin{center}
-	  \includegraphics[width=0.9\textwidth]{img/Git-logo}\\
-	  \vspace{3mm}
-	  \includegraphics[width=0.9\textwidth]{img/github_logos/GitHub_logo_2013}\\
-	  \vspace{3mm}
-	  \includegraphics[width=0.9\textwidth]{img/Purdue-logo-BW2}
+  \begin{center}
+  {\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle}
+  \linebreak
+  \insertsubtitle\\
+  \insertauthor\\
+  \vspace{2mm}
+  \insertdate
+  \vspace{5mm}
+  \end{center}
+
+  \begin{center}
+	  \includegraphics[width=0.25\textwidth]{img/Git-logo}
+	  \hspace{9mm}
+	  \includegraphics[width=0.25\textwidth]{img/github_logos/GitHub_logo_2013}
+	  \hspace{9mm}
+	  \includegraphics[width=0.25\textwidth]{img/Purdue-logo-BW2}
     \end{center}
-  \end{columns}
 }

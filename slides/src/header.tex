@@ -1,27 +1,23 @@
 % Preamble
 % =============================================================
-\documentclass[xcolor=table]{beamer} %[draft]
+\documentclass[xcolor=table]{beamer}        % Just Slides
+%\documentclass[xcolor=table,notes]{beamer} % Slides and Notes
 
-% Uncomment for handout mode
-% =============================================================
-%\usepackage{handoutWithNotes}
-%\pgfpagesuselayout{2 on 1 with notes landscape}[a4paper,border shrink=5mm]
 
 % Encoding
 % =============================================================
 \usepackage[english]{babel}
 \usepackage[latin1]{inputenc}
 
-% Beamerclass template settings
+
+% Beamer Class Template Settings
 % =============================================================
 \usetheme[compress]{Dresden}
-%\usecolortheme{dolphin}
 \setbeamercovered{transparent}
-%\usefonttheme[onlymath]{serif}
 \usefonttheme[onlysmall]{structurebold}
-%\usefonttheme{serif}
 \beamertemplatenavigationsymbolsempty
 \useinnertheme[shadow=true]{rounded}
+\usefonttheme[onlymath]{serif}
 
 
 % Packages
@@ -34,14 +30,17 @@
 \usepackage[absolute,overlay]{textpos}
 \usepackage{framed}
 \usepackage{media9}
-\usepackage{hyperref}  % Meta data in PDF
+\usepackage{hyperref}
 
-\hypersetup{pdfstartview={Fit}, bookmarks=True, pdftitle={Git workshops},
-pdfauthor={Nicolas Guarin-Zapata, Cyrus Vandrevala}, pdfsubject={Lectures},
-pdfkeywords={Version control, Scientific Computing}} % Configure hyperref
+\hypersetup{
+pdfstartview={Fit},
+bookmarks=True,
+pdftitle={Git Workshop},
+pdfauthor={Nicolas Guarin-Zapata, Cyrus Vandrevala},
+pdfsubject={Lectures},
+pdfkeywords={Version control, Scientific Computing}
+}
 
-
-\usefonttheme[onlymath]{serif} % Make equations to be in serif fonts
 
 % Definitions
 % =============================================================
@@ -51,26 +50,23 @@ pdfkeywords={Version control, Scientific Computing}} % Configure hyperref
 
 \setbeamercolor{footlinecolor}{bg=RUBgrau,fg=RUBblau}
 
-
-% Footline information
-\setbeamertemplate{footline}{%
+% Footline Information
+\setbeamertemplate{footline}{
   \begin{beamercolorbox}[sep=1em, wd=\paperwidth,leftskip=0.4cm,rightskip=0.4cm]{footlinecolor}
   \mbox{
-	\begin{minipage}{0.2\paperwidth}
-		\includegraphics[width=0.1\paperwidth]{img/Purdue-logo-BW2.pdf}
+    \begin{minipage}{0.2\paperwidth}
+	  \includegraphics[width=0.1\paperwidth]{img/Purdue-logo-BW2.pdf}
 	\end{minipage}
 	\begin{minipage}{0.6\paperwidth}
-		\begin{center}
-			Git workshop
-		\end{center}
+	  \begin{center}
+	    Git Workshop
+	  \end{center}
 	\end{minipage}
 	\begin{minipage}{0.2\paperwidth}
-		\scriptsize{\insertframenumber}
+	  \scriptsize{\insertframenumber}
 	\end{minipage}}
-  \end{beamercolorbox}%
+  \end{beamercolorbox}
 }
-
-
 
 
 % Colors
@@ -90,7 +86,8 @@ pdfkeywords={Version control, Scientific Computing}} % Configure hyperref
 \definecolor{blue}      {rgb} {0,0,1.0}
 \definecolor{lightblue} {rgb} {0.5,0.9,1.0}
 
-% Beamerclass color settings
+
+% Beamer Class Color Settings
 % =============================================================
 \setbeamercolor{block body example}{bg=RUBgrau}
 \setbeamercolor{block title example}{bg=RUBblau,fg=white}
@@ -99,7 +96,6 @@ pdfkeywords={Version control, Scientific Computing}} % Configure hyperref
 
 \setbeamercolor{section in head/foot}{fg=white, bg=RUBblau}
 \setbeamercolor{subsection in head/foot}{fg=black, bg=white}
-%\setbeamercolor{normal text}{fg=RUBblau}
 \setbeamercolor{block title}{fg=RUBblau}
 \setbeamercolor{section in toc}{fg=RUBblau}
 \setbeamercolor{section}{fg=RUBblau}
@@ -108,10 +104,7 @@ pdfkeywords={Version control, Scientific Computing}} % Configure hyperref
 \setbeamercolor{framesubetitle}{fg=black}
 \setbeamercolor{title}{fg=RUBblau,bg=RUBgrau}
 \setbeamercolor{titlelike}{bg=RUBblau}
-%\setbeamercolor{fine separation line}{}
-%\setbeamercolor{frametitle}{fg=black}
-%\setbeamercolor{item projected}{fg=white}
-%\setbeamercolor{normal text}{bg=white,fg=black}
+
 \setbeamercolor{palette sidebar primary}{use=normal text,fg=normal text.fg}
 \setbeamercolor{palette sidebar quaternary}{use=structure,fg=structure.fg}
 \setbeamercolor{palette sidebar secondary}{use=structure,fg=structure.fg}
@@ -123,27 +116,28 @@ pdfkeywords={Version control, Scientific Computing}} % Configure hyperref
 \setbeamercolor{sidebar}{bg=RUBgrau}
 \setbeamercolor{sidebar}{parent=palette primary}
 
-%\setbeamercolor{structure}{bg=RUBgruen, fg=RUBblau}
 
-% Title page customization
+% Title Page Customization
 % =============================================================
 \setbeamertemplate{title page}{
-	\vspace{-0.25cm}
-	\includegraphics[height=0.7cm]{img/Purdue-logo-BW2.pdf}\\
-	\vspace{0.5cm}
-        \begin{columns}
-        \column{.4\textwidth}
-        	  \insertsubtitle\\
+  \vspace{0.25cm}
+  \begin{columns}
+    \column{.6\textwidth}
+      \insertsubtitle\\
 	  \vspace{0.5cm}
 	  {\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle}\\
 	  \vspace{0.5cm}
 	  \insertauthor\\
+	  \vspace{2mm}
 	  \insertdate
 	  \vfill
-        \column{.6\textwidth}
+    \column{.4\textwidth}
 	\begin{center}
-	  \includegraphics[width=0.9\textwidth]{img/Git-logo}
-	\end{center}
- \end{columns}
-
+	  \includegraphics[width=0.9\textwidth]{img/Git-logo}\\
+	  \vspace{3mm}
+	  \includegraphics[width=0.9\textwidth]{img/github_logos/GitHub_Logo}\\
+	  \vspace{3mm}
+	  \includegraphics[width=0.9\textwidth]{img/Purdue-logo-BW2}
+    \end{center}
+  \end{columns}
 }

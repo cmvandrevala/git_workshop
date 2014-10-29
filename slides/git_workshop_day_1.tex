@@ -1,4 +1,4 @@
-\pdfminorversion=5 % To enforce 1.5 version of PDF
+\pdfminorversion=5
 
 \input{src/header}
 
@@ -16,29 +16,8 @@
 
 \begin{document}
 
-% TITLE SLIDES
-\begin{frame}[plain]
-\titlepage
-\end{frame}
-\note{}
-
-\begin{frame}
-\frametitle{\large{Overview}}
-\tableofcontents
-\end{frame}
-\note{}
-
-\begin{frame}
-\frametitle{\large{We Encourage Participation!}}
-\begin{itemize}
-\item Post Questions That You Might Have in the Repo
-\item Recommend Other Sources That You Found Useful
-\item Remember, We Do Not Know Everything!
-\end{itemize}
-\end{frame}
-\note{}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% INTRODUCTION
+\input{src/day_1/title_slides}
 
 % CONTENT
 \input{src/day_1/introduction_to_version_control}
@@ -48,8 +27,6 @@
 \input{src/day_1/branching}
 \input{src/day_1/deleting_files}
 \input{src/day_1/git_and_github}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %CONCLUSION
 \input{src/day_1/conclusions_day_1}

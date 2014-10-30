@@ -5,46 +5,62 @@
 \section[Deleting]{Git Delete Commands}
 
 \begin{frame}
-\frametitle{\large Delete a File (rm vs. git rm)}
-
-You can just delete a file in your filesystem, but this will need that you commit your changes with \textcolor{blue}{\texttt{git add file\_removed}}.
-
-Instead, you can use \textcolor{blue}{\texttt{git rm file\_name}} to do these two things for you.\footnote{More discussion at: \url{http://stackoverflow.com/questions/7434449/why-use-git-rm-to-remove-a-file-instead-of-rm}}
-\end{frame}
-
-\begin{frame}
-If you rm a file, it will delete it locally, but it will still exist in your git directory. In order to fully delete a file, you need to use git rm
+\frametitle{\large Deleting a File (rm vs. git rm)}
+\begin{itemize}
+\item If you delete a file in your filesystem, you still need to commit your changes with \emph{git add file\_removed}.
+\item Or you can use \emph{git rm file\_name}.
+\end{itemize}
 \end{frame}
 \note{}
 
 \begin{frame}
-\frametitle{\large Delete a File (rm vs. git rm)}
-If you want to delete a file that has been staged, but not committed, use git rm -{}-cached
+\frametitle{\large Deleting a File (rm vs. git rm)}
+If you \emph{rm} a file, it will delete it locally, but it will still exist in your git directory. In order to fully delete a file, you need to use \emph{git rm}
+\end{frame}
+\note[itemize]{
+\item More discussion at: \href{http://stackoverflow.com/questions/7434449/why-use-git-rm-to-remove-a-file-instead-of-rm}{http://stackoverflow.com/questions/7434449/why-use-git-rm-to-remove-a-file-instead-of-rm}
+}
+
+\begin{frame}
+\frametitle{\large Deleting a File}
+If you want to delete a file that has been staged, but not committed use:
+\begin{itemize}
+\item \emph{git rm -{}-cached}
+\end{itemize}
 \end{frame}
 \note{}
 
 \begin{frame}
-\frametitle{\large Delete a File (rm vs. git rm)}
-If you want to move a file, use git mv
+\frametitle{\large Moving a File}
+If you want to move a file use:
+\begin{itemize}
+\item \emph{git mv}
+\end{itemize}
 \end{frame}
 \note{}
 
 \begin{frame}
-\frametitle{\large Discard Changes to Unstaged Files}
-git checkout -{}- filename
-Branching is better practice
+\frametitle{\large Discarding Changes to Unstaged Files}
+If you want to discard changes to unstaged files use:
+\begin{itemize}
+\item \emph{git checkout -{}- filename}
+\end{itemize}
+Just keep in mind that branching is better practice...
 \end{frame}
 \note{}
 
 \begin{frame}
 \frametitle{\large Amending Staged Files}
-In order to remove a file from the staged environment, use:
-git reset filename
+In order to remove a file from the staged environment use:
+\begin{itemize}
+\item \emph{git reset filename}
+\end{itemize}
 \end{frame}
 \note{}
 
 \begin{frame}
-\frametitle{\large Amending Commits}
+\frametitle{\large Amending Existing Commits}
+So you say you want to amend an existing commit? Why? \\
 I purposely didn't add anything here. Don't do it...
 \end{frame}
 \note{}
@@ -52,6 +68,10 @@ I purposely didn't add anything here. Don't do it...
 \begin{frame}
 \frametitle{\large Amending Commits}
 Ok, fine...
-git commit -{}-amend
+\begin{itemize}
+\item \emph{git commit -{}-amend}
+\end{itemize}
+\vspace{3mm}
+But you are missing the point of version control...
 \end{frame}
 \note{}

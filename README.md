@@ -12,6 +12,9 @@ Contains the code and presentation for the git workshop in October 2014.
 
 **Research Interests:** Computational Mechanics, Wave Propagation, Acoustics, Design of Materials, Applied Mathematics.
 
+## Summary file
+We want you to help us building a summary of some of the Git commands in a summary file located at [`summary/summary.tex`](./summary/summary.tex). The main idea is to use all of the power of Git for collaborating in the writing of this document.
+
 ## Questions and Comments
 If you have any, please create a new text file in the ``questions_and_comments`` directory with any questions or comments that you have about the presentation. We will answer them as soon as possible!
 

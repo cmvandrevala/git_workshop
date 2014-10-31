@@ -1,0 +1,76 @@
+% ======================================= %
+% PROGRAMMING CHALLENGES
+% ======================================= %
+
+\section[Programming Challenges]{Programming Challenges}
+
+\begin{frame}
+\frametitle{Verlet Integration}
+\begin{itemize}
+\item Verlet integration is a numerical method used to integrate Newton's equations of motion.
+\item It is frequently used to calculate trajectories of particles in molecular dynamics simulations and computer graphics.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Verlet Integration}
+\begin{itemize}
+\item If we do a Taylor expansion of the position vector $\vec{x}(t\pm\Delta t)$ forwards and backward we get:
+\end{itemize}
+\begin{align*}
+\vec{x}(t + \Delta t)
+&= \vec{x}(t) + \vec{v}(t)\Delta t + \frac{\vec{a}(t) \Delta t^2}{2}
++ \frac{\vec{b}(t) \Delta t^3}{6} + \mathcal{O}(\Delta t^4)\\
+\vec{x}(t - \Delta t)
+&= \vec{x}(t) - \vec{v}(t)\Delta t + \frac{\vec{a}(t) \Delta t^2}{2}
+- \frac{\vec{b}(t) \Delta t^3}{6} + \mathcal{O}(\Delta t^4), \,
+\end{align*}
+\end{frame}
+
+\begin{frame}
+\frametitle{Verlet Integration}
+\begin{itemize}
+\item Adding these two expansions gives:
+\end{itemize}
+\[\vec{x}(t + \Delta t) = 2\vec{x}(t) - \vec{x}(t - \Delta t) + \vec{a}(t) \Delta t^2 + \mathcal{O}(\Delta t^4)\, .\]
+\vspace{2mm}
+We can see that the first and third-order terms from the Taylor expansion cancel out, thus making the Verlet integrator an order more accurate than integration by simple Taylor expansion alone.
+\end{frame}
+
+\begin{frame}
+\frametitle{Verlet Integration}
+So we can use as time stepper the equation
+\[\boxed{\vec{x}(t + \Delta t) = 2\vec{x}(t) - \vec{x}(t - \Delta t) + \vec{a}(t) \Delta t^2} \enspace ,\]
+\vspace{2mm}
+or in terms of forces
+\[\boxed{\vec{x}(t + \Delta t) = 2\vec{x}(t) - \vec{x}(t - \Delta t) + \frac{\vec{F}(t)}{m} \Delta t^2} \enspace ,\]
+\end{frame}
+
+\begin{frame}
+\frametitle{Verlet Integration}
+Our goal is to create a solver for Newton equations using Verlet integration. We can split the project into small groups.\\
+\vspace{2mm}
+A possible division of labors is:
+\begin{itemize}
+\item Force Routines (Springs, Electrostatic Interactions, etc.)
+\item Verlet Step Calculator for Different Coordinates ($x$, $y$, $z$)
+\item Verlet Time Stepper;
+\item Plotting Capabilities
+\item Main Routines
+\end{itemize}
+\end{frame}
+\note{}
+
+\begin{frame}
+\frametitle{Programming Challenges}
+\begin{itemize}
+\item We have a set of simple programming challenges stored in the programming\_challenges directory of the main repo.
+\vspace{3mm}
+\item Try to commit your code in three ways:
+\begin{enumerate}
+\item Locally on your computer
+\item Remotely on your GitHub account
+\item Via pull request on Cyrus' GitHub account
+\end{enumerate}
+\end{itemize}
+\end{frame}

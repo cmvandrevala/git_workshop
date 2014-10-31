@@ -16,7 +16,7 @@ Contains the code and presentation for the git workshop in October 2014.
 We want you to help us building a summary of some of the Git commands in a summary file located at [`collaborated_summary/summary.tex`](./collaborated_summary/summary.tex). The main idea is to use all of the power of Git for collaborating in the writing of this document.
 
 ## Programming Challenges
-We have selected some small programming tasks to encourage participants to commit their solutions. The definition of these challenges is in the file [programming_challenges](./programming_challenges.md).
+We have selected some small programming tasks to encourage participants to commit their solutions. The definition of these challenges is in the file [programming_challenges](./programming_challenges/programming_challenges.md).
 
 ## Questions and Comments
 If you have any, please create a new text file in the ``questions_and_comments`` directory with any questions or comments that you have about the presentation. We will answer them as soon as possible!

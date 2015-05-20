@@ -1,6 +1,6 @@
 # Programming Challenges
 
-We have chosen a small set of programming *challenges* with the idea of generate a small repo with the solutions.  Please commit your code as ``probX_ID.ext``, where ``X`` is the number of the problem, ``ID`` and ``ext`` is the extension of the file. There is a directory named ``./programming_challenges/``, where you can commit your solutions.
+We have chosen a small set of programming challenges and a section in the repo where you can commit your solutions.  Please commit your code as ``probX_ID.ext``, where ``X`` is the number of the problem, ``ID`` and ``ext`` is the extension of the file. There is a directory named ``programming_challenges/solutions``, where you can commit your solutions.
 
 ## Problem 1
 If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.

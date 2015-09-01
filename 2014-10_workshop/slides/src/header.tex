@@ -1,0 +1,142 @@
+% Preamble
+% =============================================================
+\documentclass[xcolor=table]{beamer}        % Just Slides
+%\documentclass[xcolor=table,notes]{beamer} % Slides and Notes
+
+
+% Encoding
+% =============================================================
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+
+
+% Beamer Class Template Settings
+% =============================================================
+\usetheme[compress]{Dresden}
+\setbeamercovered{transparent}
+\usefonttheme[onlysmall]{structurebold}
+\beamertemplatenavigationsymbolsempty
+\useinnertheme[shadow=true]{rounded}
+\usefonttheme[onlymath]{serif}
+
+
+% Packages
+% =============================================================
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{graphicx}
+\usepackage{ziffer}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{etex}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{framed}
+%\usepackage{media9}
+\usepackage{hyperref}
+
+\hypersetup{
+pdfstartview={Fit},
+bookmarks=True,
+pdftitle={Git Workshop},
+pdfauthor={Nicolas Guarin-Zapata, Cyrus Vandrevala},
+pdfsubject={Lectures},
+pdfkeywords={Version control, Scientific Computing}
+}
+
+
+% Definitions
+% =============================================================
+\setlength{\TPVertModule}{\paperheight}
+\setlength{\TPHorizModule}{\paperwidth}
+\setlength{\TPHorizModule}{\paperwidth}\setlength{\TPVertModule}{\paperheight}
+
+\setbeamercolor{footlinecolor}{bg=RUBgrau,fg=RUBblau}
+
+% Footline Information
+\setbeamertemplate{footline}{
+  \begin{beamercolorbox}[sep=1em, wd=\paperwidth,leftskip=0.4cm,rightskip=0.4cm]{footlinecolor}
+  \mbox{
+    \begin{minipage}{0.2\paperwidth}
+	  \includegraphics[width=0.1\paperwidth]{img/Purdue-logo-BW2.pdf}
+	\end{minipage}
+	\begin{minipage}{0.6\paperwidth}
+	  \begin{center}
+	    Git Workshop
+	  \end{center}
+	\end{minipage}
+	\begin{minipage}{0.2\paperwidth}
+	  \scriptsize{\insertframenumber}
+	\end{minipage}}
+  \end{beamercolorbox}
+}
+
+
+% Colors
+% =============================================================
+\definecolor{RUBgrau}   {HTML}{e6e4e4}
+\definecolor{RUBblau}   {HTML}{003560}
+\definecolor{RUBgruen}  {HTML}{94c11c}
+\definecolor{middlegray}{rgb} {0.5,0.5,0.5}
+\definecolor{lightgray} {rgb} {0.97,0.97,0.97}
+\definecolor{tablegray} {rgb} {0.85,0.85,0.85}
+\definecolor{white}     {rgb} {1.0,1.0,1.0}
+\definecolor{orange}    {rgb} {0.8,0.3,0.3}
+\definecolor{yac}       {rgb} {0.6,0.6,0.1}
+\definecolor{red}       {rgb} {1.0,0,0}
+\definecolor{green}     {rgb} {0.0,1.0,0.0}
+\definecolor{black}     {rgb} {0,0,0}
+\definecolor{blue}      {rgb} {0,0,1.0}
+\definecolor{lightblue} {rgb} {0.5,0.9,1.0}
+
+
+% Beamer Class Color Settings
+% =============================================================
+\setbeamercolor{block body example}{bg=RUBgrau}
+\setbeamercolor{block title example}{bg=RUBblau,fg=white}
+\setbeamercolor{block body alerted}{bg=RUBgrau}
+\setbeamercolor{block title alerted}{bg=red,fg=black}
+
+\setbeamercolor{section in head/foot}{fg=white, bg=RUBblau}
+\setbeamercolor{subsection in head/foot}{fg=black, bg=white}
+\setbeamercolor{block title}{fg=RUBblau}
+\setbeamercolor{section in toc}{fg=RUBblau}
+\setbeamercolor{section}{fg=RUBblau}
+\setbeamercolor{item}{fg=RUBblau}
+\setbeamercolor{frametitle}{fg=RUBblau,bg=RUBgrau}
+\setbeamercolor{framesubetitle}{fg=black}
+\setbeamercolor{title}{fg=RUBblau,bg=RUBgrau}
+\setbeamercolor{titlelike}{bg=RUBblau}
+
+\setbeamercolor{palette sidebar primary}{use=normal text,fg=normal text.fg}
+\setbeamercolor{palette sidebar quaternary}{use=structure,fg=structure.fg}
+\setbeamercolor{palette sidebar secondary}{use=structure,fg=structure.fg}
+\setbeamercolor{palette sidebar tertiary}{use=normal text,fg=normal text.fg}
+
+\setbeamercolor{section in sidebar}{fg=RUBgrau}
+\setbeamercolor{section in sidebar shaded}{fg=RUBgrau}
+\setbeamercolor{separation line}{}
+\setbeamercolor{sidebar}{bg=RUBgrau}
+\setbeamercolor{sidebar}{parent=palette primary}
+
+
+% Title Page Customization
+% =============================================================
+\setbeamertemplate{title page}{
+  \vspace{0.25cm}
+  \begin{center}
+  {\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle}
+  \linebreak
+  \insertsubtitle\\
+  \insertauthor\\
+  \vspace{2mm}
+  \insertdate
+  \vspace{5mm}
+  \end{center}
+
+  \begin{center}
+	  \includegraphics[width=0.25\textwidth]{img/Git-logo}
+	  \hspace{9mm}
+	  \includegraphics[width=0.25\textwidth]{img/github_logos/GitHub_logo_2013}
+	  \hspace{9mm}
+	  \includegraphics[width=0.25\textwidth]{img/Purdue-logo-BW2}
+    \end{center}
+}
